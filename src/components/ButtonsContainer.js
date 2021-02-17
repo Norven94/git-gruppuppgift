@@ -23,7 +23,7 @@ const ButtonsContainer = () => {
   return(
     <div className={buttons}>
       <p>some buttons here</p>
-      
+      <p>some additional buttons here</p>
     </div>
   )
 }
