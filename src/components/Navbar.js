@@ -4,7 +4,6 @@ const Navbar = () => {
       <ul>
         <li>Home</li>
         <li>About</li>
-        <li>Linktest</li>
       </ul>
     </div>
   );
