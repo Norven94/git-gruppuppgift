@@ -19,7 +19,29 @@ export default function DataProvider(props) {
     };
 
     const calculate = (calculation) => {
-        console.log(calculation);
+        let calcArray = calculation.split(" ");
+        let operatorsArray = calcArray.filter((e) => /\D/.test(e)); // Båda dessa filter kommer inte hantera decimaltal.
+        let numbersArray = calcArray.filter((e) => !/\D/.test(e));
+        console.log(operatorsArray);
+        console.log(numbersArray);
+        let result = parseInt(numbersArray[0]);
+        for (let i = 0; i < numbersArray.length; i++) {
+        switch (operatorsArray[i]) {
+            case "+":
+            result += parseInt(numbersArray[i + 1]);
+            break;
+            case "-":
+            result -= numbersArray[i + 1];
+            break;
+            case "x":
+            result *= numbersArray[i + 1];
+            break;
+            case "/":
+            result /= numbersArray[i + 1];
+            break;
+        }
+        }
+        setDataInput(result);
     }
 
     const values = {
