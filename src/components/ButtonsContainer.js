@@ -1,7 +1,9 @@
 import { useState } from "react";
+import Buttons from "./Button";
+import styles from "../css/ButtonsContainer.module.css";
 
 const ButtonsContainer = () => {
-  const [buttonValues, setButtonsVaules] = useState([
+  const [buttonValues, setButtonsValues] = useState([
       7,
       8,
       9,
@@ -21,9 +23,10 @@ const ButtonsContainer = () => {
     ]);
 
   return(
-    <div className={buttons}>
-      <p>some buttons here</p>
-      
+    <div className={styles.button}>
+      {buttonValues.map((value) => (
+        <Buttons key={value} data={value} />
+      ))}
     </div>
   )
 }
