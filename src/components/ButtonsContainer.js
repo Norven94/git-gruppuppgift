@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Buttons from "./Button";
+import Buttons from "./Buttons";
 import styles from "../css/ButtonsContainer.module.css";
 
 const ButtonsContainer = () => {
