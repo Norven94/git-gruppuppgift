@@ -12,6 +12,7 @@ function App() {
         <DataContext>
         <Route exact path="/"component={Home} />
       </DataContext>
+      <Route exact path="/about"component={About} />
 
       </Router>
     </div>
