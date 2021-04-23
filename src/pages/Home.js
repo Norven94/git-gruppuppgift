@@ -1,8 +1,13 @@
+import Calculator from "../components/Calculator"
 
-export default function Home() {
+function Home() {
   return (
     <div>
-      <h1>This is Home Page</h1>
+       <Calculator />
     </div>
   )
 }
+
+export default Home
+
+
